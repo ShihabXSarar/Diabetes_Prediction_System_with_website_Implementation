@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+        .description {
+            font-size: 18px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form div {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block; /* Center the button */
+            margin: 20px auto; /* Add spacing and center horizontally */
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Diabetes Prediction System</h1>
+    <p class="description">Check if you are diabetic by filling in the details below.</p>
+    <div class="container">
+        <form action="/predict" method="post">
+            <div>
+                <label for="pregnancies">Pregnancies:</label>
+                <input type="text" id="pregnancies" name="feature1" required>
+            </div>
+            <div>
+                <label for="glucose">Glucose:</label>
+                <input type="text" id="glucose" name="feature2" required>
+            </div>
+            <div>
+                <label for="bloodpressure">Blood Pressure:</label>
+                <input type="text" id="bloodpressure" name="feature3" required>
+            </div>
+            <div>
+                <label for="skinthickness">Skin Thickness:</label>
+                <input type="text" id="skinthickness" name="feature4" required>
+            </div>
+            <div>
+                <label for="insulin">Insulin:</label>
+                <input type="text" id="insulin" name="feature5" required>
+            </div>
+            <div>
+                <label for="bmi">BMI:</label>
+                <input type="text" id="bmi" name="feature6" required>
+            </div>
+            <div>
+                <label for="dpf">Diabetes Pedigree Function:</label>
+                <input type="text" id="dpf" name="feature7" required>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="feature8" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
